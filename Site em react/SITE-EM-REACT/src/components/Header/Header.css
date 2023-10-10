@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@500&display=swap');
+
+
+:root {
+    --fonteMarca: 'Montserrat', sans-serif;
+    --fonteHeader: 'Poppins', sans-serif;
+}
+
+*{
+    margin:0px;
+}
+
+.corpo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 100px;
+    padding-left: 54px;
+    padding-top: 33.5px;
+    padding-bottom: 34.5px;
+    background-color: #fff;
+}
+
+.empresa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+.empresa img {
+    width: 50px;
+}
+.empresa h2 {
+    font-size: 34px;
+    font-family: var(--fonteMarca);
+}
+
+.botoes {
+    display: flex;
+    gap: 75px;
+    align-items: center;
+}
+
+.botoes a {
+    text-decoration: none;
+    color: #000;
+    font-family: var(--fonteHeader);
+    font-size: 16px;
+}
+
+.icones {
+    display: flex;
+    align-items: center;
+    gap: 47px;
+}

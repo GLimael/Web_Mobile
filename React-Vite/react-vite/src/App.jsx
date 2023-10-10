@@ -1,8 +1,9 @@
 import Banner from "./components/Banner";
-import Formulario from "./components/Formulario"
+import Formulario from "./components/Formulario";
+import './App.css'
 
 const App = () => {
-  return <div>
+  return <div className="centro">
     <Banner />
     <Formulario />
     </div>;
