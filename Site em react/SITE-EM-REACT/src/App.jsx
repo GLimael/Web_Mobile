@@ -1,9 +1,10 @@
-import Header from './components/Header/index'
+import Header from './components/Header/'
+import Banner from './components/Banner/'
 
 const App = () => {
   return  <div>
     <Header />
-    <img src="../images/Imagem-fundo.png" alt="Imagem de fundo" />
+    <Banner />
   </div>
 }
 
