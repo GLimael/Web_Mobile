@@ -1,3 +1,7 @@
-.img {
+.banner img {
     width: 100%;
+}
+
+.banner {
+    text-align: center;
 }
