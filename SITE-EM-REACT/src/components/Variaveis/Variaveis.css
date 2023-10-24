@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --Fonte-Poppins: 'Poppins', sans-serif;
+    --Preto333: #333;
+    --Preto: #000;
+    --CorTexto: #B88E2F;
+}

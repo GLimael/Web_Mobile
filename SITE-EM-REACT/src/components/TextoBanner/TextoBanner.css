@@ -1,0 +1,52 @@
+@import '../Variaveis/Variaveis.css';
+
+.textoBanner {
+    display: flex;
+    flex-direction: column;
+    margin-top: -35rem;
+    margin-left: 46.188rem;
+    gap: 2rem;
+    background-color: #FFF3E3;
+    width: 40.188rem;
+    height: 27.688rem;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.texto-H4-Banner {
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 3px;
+    font-family: var(--Fonte-Poppins);
+    margin-left: 41px;
+}
+
+.texto-H1-Banner {
+    font-size: 52px;
+    font-weight: 700;
+    font-family: var(--Fonte-Poppins);
+    color: var(--CorTexto);
+    margin-left: 41px;
+}
+
+.texto-P-Banner {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: var(--Fonte-Poppins);
+    margin-left: 41px;
+}
+
+.botao {
+    background-color: var(--CorTexto);
+    color: #fff;
+    font-family: var(--Fonte-Poppins);
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 25px 72px;
+    width: 100px;
+    text-align: center;
+    margin-left: 39px;
+}

@@ -1,0 +1,7 @@
+.banner {
+    text-align: center;
+    background-image: url('./images/Imagem-fundo.png');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
