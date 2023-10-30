@@ -1,0 +1,45 @@
+.card {
+    background-color: #F4F5F7;
+    width: 285px;
+    height: 446px;
+    margin: 32px;
+}
+
+.conteudoCard {
+    margin: 16px;
+}
+
+.conteudoCard h4 {
+    font-family: var(--Fonte-Poppins);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.descricaoConteudo {
+    font-family: var(--Fonte-Poppins);
+    font-size: 16px;
+    font-weight: 500;
+    color: #898989;
+    margin-bottom: 8px;
+}
+
+.PrecoConteudo {
+    display: flex;
+    gap: 16px;
+}
+
+.precoNovo {
+    font-family: var(--Fonte-Poppins);
+    font-size: 20px;
+    font-weight: 600;
+    color: #3A3A3A;
+}
+
+.precoAntigo {
+    font-family: var(--Fonte-Poppins);
+    font-size: 16px;
+    font-weight: 400;
+    color: #b0b0b0;
+    text-decoration-line: line-through;
+}

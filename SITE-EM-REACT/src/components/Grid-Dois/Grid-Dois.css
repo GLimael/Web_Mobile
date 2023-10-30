@@ -1,0 +1,37 @@
+@import '../Variaveis/Variaveis.css';
+
+.gridDois {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gridDois h3 {
+    font-family: var(--Fonte-Poppins);
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.primeirasImg {
+    display: flex;
+}
+
+.segundasImg {
+    display: flex;
+}
+
+.gridDois a {
+    width: 245px;
+    height: 48px;
+    border: 1px solid #B88E2F;
+    font-family: var(--Fonte-Poppins);
+    font-size: 16px;
+    font-weight: 600;
+    color: #B88E2F;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
