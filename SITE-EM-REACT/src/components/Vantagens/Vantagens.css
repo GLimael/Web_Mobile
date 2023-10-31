@@ -1,0 +1,36 @@
+@import '../Variaveis/Variaveis.css';
+
+.vantagens {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+    background-color: #FAF3EA;
+}
+
+.vantagem {
+    display: flex;
+}
+
+.vantagem img {
+    width: 60px;
+    height: 60px;
+}
+
+.vantagensDescricao {
+    margin-left: 10px;
+
+}
+
+.vantagensDescricao h4 {
+    font-family: var(--Fonte-Poppins);
+    font-size: 25px;
+    font-weight: 600;
+    color: #242424;
+}
+
+.vantagensDescricao p {
+    font-family: var(--Fonte-Poppins);
+    font-size: 20px;
+    font-weight: 500;
+    color: #898989;
+}
