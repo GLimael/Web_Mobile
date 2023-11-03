@@ -30,7 +30,7 @@ export default function Footer () {
             <div className='footerConteudo'>
                 <h5>Newsletter</h5>
                 <div className='newsletter'>
-                    <input type="text" />
+                    <input type="text" placeholder='Enter Your Email Address' />
                     <a href="#">Subscribe</a>
                 </div>
             </div>
