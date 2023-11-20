@@ -8,7 +8,7 @@ function MeuComponente() {
   const [numero, setNumero] = useState(0);
   //Número para usar com useRef
   const numeroRef = useRef(0);
-  //Váriavel que se referência ao DOM do button
+  //Váriavel que se referência ao DOM do button, podendo usar funções DOM no seu objeto useRef
   const botaoRef = useRef();
   //Número antigo do contador com useRef
   const contadorAntigoRef = useRef();
