@@ -2,75 +2,59 @@ import { useEffect, useRef, useState } from 'react';
 import './App.css';
 
 function MeuComponente() {
-  // Criando uma referência mutável para o botão
-  const meuBotaoRef = useRef(null);
-  const [source, setSource] = useState("");
-  const [tituloBotao, setTituloBotao] = useState("Botão Mágico");
+  //Contador
+  const [contador, setContador] = useState(0);
+  //Número para loop
+  const [numero, setNumero] = useState(0);
+  //Número para usar com useRef
+  const numeroRef = useRef(0);
+  //Váriavel que se referência ao DOM do button
+  const botaoRef = useRef();
+  //Número antigo do contador com useRef
+  const contadorAntigoRef = useRef();
+  //Número antigo do contador com useState
+  const [contadorAntigoState, setContadorAntigoState] = useState();
 
-  // Função para mudar a cor do botão ao passar o mouse sobre ele
-  const mudarCor = () => {
-    if (meuBotaoRef.current) {
-      meuBotaoRef.current.style.backgroundColor = 'lightblue';
-      meuBotaoRef.current.style.padding = '10px';
-    }
-  };
-
-  // Função para restaurar a cor original do botão
-  const restaurarCor = () => {
-    if (meuBotaoRef.current) {
-      meuBotaoRef.current.style.backgroundColor = '';
-      meuBotaoRef.current.style.padding = '0px';
-    }
-  };
-
-  const marselo = () => {
-    setSource("../src/assets/marselo.jpg");
-  }
-
-  const sairMarselo = () => {
-    setSource("")
-  }
-
-  return (
-    <div>
-      {/* Associando a referência mutável ao botão */}
-      <button
-        ref={meuBotaoRef}
-        onMouseEnter={mudarCor}
-        onMouseLeave={restaurarCor}
-        onClick={marselo}
-      >
-        {tituloBotao}
-      </button>
-      <ExemploComponente />
-      <img src={source} alt="" onClick={sairMarselo} />
-    </div>
-  );
-}
-
-function ExemploComponente() {
-  const meuInputRef = useRef(null);
-
+  //A cada atualização do componente, ele chama a função dentro do useEffect
   useEffect(() => {
-    // Foca no input quando o componente é montado
-    meuInputRef.current.focus();
-  }, []);
+    // setNumero(numero+10);
 
-  const mudarFonte = () => {
-    meuInputRef.current.style.fontSize = '20px';
-  }
+    console.log("Número do useRef: ", numeroRef.current);
+    numeroRef.current = Math.random();
+  });
 
-  const sair = () => {
-    meuInputRef.current.style.fontSize = '12px';
-  }
+  //Simulando um click quando a página é carregada
+  useEffect(() => {
+    console.log("DOM do button: ", botaoRef.current);
+    botaoRef.current.click();
+    console.log("Clicado!");
+  }, [])
+
+  //Absorvendo o valor antigo do contador
+  useEffect(() => {
+    contadorAntigoRef.current = contador;
+    //Se ativado a linha abaixo, o useRef não armazena o valor antigo, e sim o atual
+    // setContadorAntigoState(contador);
+  }, [contador])
+
+  //Comentário a cada renderização do componente
+  console.log("Renderizou");
 
   return (
     <div>
-      <input 
-      ref={meuInputRef}
-      onMouseEnter={mudarFonte}
-      onMouseLeave={sair}
-      />
+      <h1>O valor do contador é: {contador}</h1>
+      <h1>O valor do número é: {numero}</h1>
+      <h2>*useRef* O valor antigo do contador é: {contadorAntigoRef.current}</h2>
+      <h2>*useState* O valor antigo do contador é: {contadorAntigoState}</h2>
+      <button 
+      ref={botaoRef}
+      onClick={() => {
+        setContador(contador+1);
+
+      }}>Contador +1</button>
+
+      <h1>O valor do númeroRef é: {numeroRef.current}</h1>
+
     </div>
   );
 }
